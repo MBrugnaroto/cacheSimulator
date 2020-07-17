@@ -55,6 +55,7 @@ cache com 4 conjuntos e associatividade 2, o vetor será dividido em 8 conjuntos
 duas posições cada conjunto.
 
 Exemplo:
+
 <img src="/Cache/Relatorio/exAssociatividade.PNG" alt="Imagem das associatividades"/>
 
 Agora o endereço não será mais mapeado por posição e sim por conjunto. Como
