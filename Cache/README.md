@@ -43,26 +43,28 @@ dados pré-definidos. Ou seja, se a posição tem tamanho para 4 dados, estando 
 quando houver a inserção de um dado, será carregado para a posição mais 3 dados.
 
 * Associatividade:
-  * Direto:
+  * **Direto:**
 Após um dado ser solicitado pelo processador, ele é procurado no cache, se não
 houver esse dado, o mesmo é inserido na posição que foi mapeado. Se a posição
 mapeada estiver vazia o dado é simplesmente inserido, caso contrário, substitui-se o
 bloco.
-  * N-vias e Completamente Associativo:
+  * **N-vias e Completamente Associativo:**
 O vetor inicialmente contem n (nconjuntos) posições. Assim, se houver um
 aumento na associatividade as posições serão dividas em N conjuntos. Ou seja, em uma
 cache com 4 conjuntos e associatividade 2, o vetor será dividido em 8 conjuntos com
 duas posições cada conjunto.
 
 Exemplo:
-Direto: 2-vias:
-Conjunto 0:
-Conjunto 1:
+
 
 Agora o endereço não será mais mapeado por posição e sim por conjunto. Como
 pode ser verificado no header “Calculo.c”.
 
+<pre>
+<code>
 Endereco = (indice % (NConjuntos/Associatividade)) * Associatividade;
+</code>
+</pre>
 
 Após isso, é verificado em qual posição do conjunto está o dado solicitado pelo
 processador. Caso não houver, será necessário inseri-lo, assim, verifica-se qual das
